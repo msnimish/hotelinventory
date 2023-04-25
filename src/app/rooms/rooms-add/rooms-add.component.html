@@ -1,0 +1,36 @@
+{{ room | json }}
+
+<form style="width:60%; margin: 50px auto" (ngSubmit)="AddRoom()" >
+    <h1>{{ success }}</h1>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Room Type</label>
+        <input type="text" class="form-control" name="roomType" placeholder="Enter Room type..." [(ngModel)]="room.roomType" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Amenities</label>
+        <input type="text" class="form-control" name="amenities" placeholder="Mention Amenities here..."  [(ngModel)]="room.amenities" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Price</label>
+        <input type="number" class="form-control" name="price" placeholder="Enter Room Price..." [(ngModel)]="room.price" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Add Photo</label>
+        <input type="text" class="form-control" placeholder="Add Photo url here..." name="photos" [(ngModel)]="room.photos" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Check In</label>
+        <input type="datetime-local" class="form-control" name="checkInTime" [(ngModel)]="room.checkInTime" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Check Out</label>
+        <input type="datetime-local" class="form-control" name="checkOutTime" [(ngModel)]="room.checkOutTime" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Rating</label>
+        <input type="number" class="form-control" name="rating" placeholder="Enter Rating here..." [(ngModel)]="room.rating" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add Room</button>
+    </div>
+</form>
